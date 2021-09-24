@@ -12,5 +12,4 @@ public interface ProduitService {
     Produit put(Produit produit);
     void deleteById(Long id);
 
-
 }
