@@ -2,12 +2,15 @@ package fr.semifir.magasin;
 
 import fr.semifir.magasin.repositories.CategorieRepository;
 import fr.semifir.magasin.repositories.ClientRepository;
+import fr.semifir.magasin.repositories.CommandeRepository;
 import fr.semifir.magasin.repositories.ProduitRepository;
 import fr.semifir.magasin.services.CategorieService;
 import fr.semifir.magasin.services.ClientService;
+import fr.semifir.magasin.services.CommandeService;
 import fr.semifir.magasin.services.ProduitService;
 import fr.semifir.magasin.services.impl.CategorieServiceImpl;
 import fr.semifir.magasin.services.impl.ClientServiceImpl;
+import fr.semifir.magasin.services.impl.CommandeServiceImpl;
 import fr.semifir.magasin.services.impl.ProduitServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,6 +31,11 @@ public class AppConfig {
     @Bean
     public ClientService clientService(ClientRepository clientRepository) {
         return new ClientServiceImpl(clientRepository);
+    }
+
+    @Bean
+    public CommandeService commandeService(CommandeRepository commandeRepository) {
+        return new CommandeServiceImpl(commandeRepository);
     }
 
 }
