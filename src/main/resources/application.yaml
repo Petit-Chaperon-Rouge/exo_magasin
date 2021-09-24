@@ -13,5 +13,5 @@ logging:
     root: WARN
     fr.semifir: INFO
   file:
-    name: logs.txt
-    path: ./logs
+    name: logs/logs.txt
+    path: ./
