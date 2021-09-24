@@ -22,6 +22,8 @@ public class Commande {
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Client client;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @ManyToMany
+    @JoinColumn(name = "produit_id", referencedColumnName = "id")
     private Set<Produit> produits;
+
 }

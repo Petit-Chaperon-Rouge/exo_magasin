@@ -21,6 +21,4 @@ public class Categorie {
     @Column(name = "nom")
     private String nom;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    private Set<Produit> produits;
 }
